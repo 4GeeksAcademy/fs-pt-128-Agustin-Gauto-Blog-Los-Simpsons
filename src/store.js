@@ -1,6 +1,7 @@
 export const initialStore=()=>{
   return{
     message: null,
+    characters: [],
     todos: [
       {
         id: 1,
@@ -26,6 +27,14 @@ export default function storeReducer(store, action = {}) {
         ...store,
         todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
       };
+
+      case 'get_characters':
+
+      return {
+        ...store,
+        characters: action.payload
+      }
+
     default:
       throw Error('Unknown action.');
   }    
