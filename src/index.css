@@ -4,3 +4,17 @@
     width: 1200px;
     margin: auto;
 }
+
+.navbar{
+    background-image: url("https://thesimpsonsapi.com/clouds-bg.jpg");
+    background-position: center;
+}
+
+/* body{
+    background-image: url("https://images7.alphacoders.com/775/thumb-1920-775120.jpg");
+    background-size: cover;
+} */
+
+body{
+    background-image: url("https://thesimpsonsapi.com/clouds-bg.jpg");
+}
