@@ -7,11 +7,19 @@ export const CardBig = ({ character }) => {
 
     return (
         <>
+    
             <div className="card m-auto" style={{width: "18rem"}}>
                 <div className="card-body">
-                    <h5 className="card-title">Special title treatment</h5>
-                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <div className="">
+                        <img src={`https://cdn.thesimpsonsapi.com/500/character/1.webp`} alt="" />
+                        <div>
+                            <h1>TITULO</h1>
+                            <p>texto</p>
+                        </div>
+                    </div>
+                    <Link to="/">
+                    <a className="btn btn-primary">Return to the main page</a>
+				</Link>
                 </div>
             </div>
         </>

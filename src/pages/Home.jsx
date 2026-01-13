@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { CardSmall } from "./CardSmall.jsx";
 import { getCharacters } from "../Services/APIServices.js";
+import { CardBig } from "./CardBig.jsx";
 
 export const Home = () => {
 
