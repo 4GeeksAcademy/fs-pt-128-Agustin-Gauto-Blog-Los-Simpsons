@@ -15,7 +15,7 @@ export const CardSmall = ({ character }) => {
                     <p className="card-text" style={{height: "80px"}}>{character.occupation}</p>
                     <p className="card-text">{character.birthdate ? character.birthdate : "unknown"}</p>
                     <div className="d-flex justify-content-between">
-                        <Link to="/Learn-more">
+                        <Link to={`/character/${character.id}`}>
                         <a type="button" className="btn btn-primary">Learn more!</a>
 					</Link>
                         <button type="button" className="btn btn-outline-warning">❤️</button>

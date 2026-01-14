@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import useGlobalReducer from "../hooks/useGlobalReducer"
 
-export const CardBig = ({ character }) => {
+export const CardBig = () => {
+
+
+    const {id} = useParams()
 
     const { store, dispatch } = useGlobalReducer()
 
@@ -11,7 +14,7 @@ export const CardBig = ({ character }) => {
             <div className="card m-auto" style={{width: "18rem"}}>
                 <div className="card-body">
                     <div className="">
-                        <img src={`https://cdn.thesimpsonsapi.com/500/character/1.webp`} alt="" />
+                        <img src={`https://cdn.thesimpsonsapi.com/500/character/${id}.webp`} alt="" />
                         <div>
                             <h1>TITULO</h1>
                             <p>texto</p>
