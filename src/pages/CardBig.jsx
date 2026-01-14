@@ -7,35 +7,38 @@ export const CardBig = () => {
 
     const { store, dispatch } = useGlobalReducer()
 
-    const {id} = useParams()
+    const { id } = useParams()
     
     const [character, setCharacter ] = useState({})
 
     const getCharacterData = async () => { 
         const characterData = await getCharacter(id)
         setCharacter(characterData)
+        
     }
+   
 
     useEffect(()=>{
         getCharacterData()
       },[])
-   
 
 
     return (
         <>
     
-            <div className="card m-auto" style={{width: "18rem"}}>
+            <div className="card m-auto" style={{width: "100rem"}}>
                 <div className="card-body">
-                    <div className="d-flex justify-content-between">
+                    <div className="row">
+                        <div className="col-4">
                         <img src={`https://cdn.thesimpsonsapi.com/500/character/${id}.webp`} alt="" />
-                        <div>
+                        </div>
+                        <div className="col-6">
                             <h1>{character.name}</h1>
-                            <p>texto</p>
+                            <p>{character.age}</p>
                         </div>
                     </div>
                     <Link to="/">
-                    <a className="btn btn-primary">Return to the main page</a>
+                    <a className="btn btn-primary m-5">Return to the main page</a>
 				</Link>
                 </div>
             </div>

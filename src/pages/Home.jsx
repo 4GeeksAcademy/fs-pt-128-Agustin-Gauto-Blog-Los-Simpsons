@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { CardSmall } from "./CardSmall.jsx";
 import { getCharacters } from "../Services/APIServices.js";
-import { CardBig } from "./CardBig.jsx";
+
 
 export const Home = () => {
 
@@ -10,10 +10,18 @@ export const Home = () => {
 
   useEffect(()=>{
 	getCharacters(dispatch)
+	
   },[])
 
 	return (
 		<>
+			<div className="cardSmall">
+			{
+				store.characters.map(character => (
+					<CardSmall character={character} key={character.id} />
+				))
+			}
+			</div>
 			<div className="cardSmall">
 			{
 				store.characters.map(character => (
