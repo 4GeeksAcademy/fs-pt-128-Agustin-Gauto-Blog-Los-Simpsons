@@ -48,8 +48,8 @@ export const CardBig = () => {
                      </ul>
                         </div>
                     </div>
-                    <Link to="/">
-                    <a className="btn btn-primary m-5">Return to the main page</a>
+                    <Link className="d-flex justify-content-center" to="/">
+                    <a className="btn btn-primary">Return to the main page</a>
 				</Link>
                 </div>
             </div>
