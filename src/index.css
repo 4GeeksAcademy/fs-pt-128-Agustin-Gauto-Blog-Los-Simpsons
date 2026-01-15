@@ -17,3 +17,10 @@ body{
     background-image: url("https://images7.alphacoders.com/775/thumb-1920-775120.jpg");
     background-size: cover;
 } */
+
+.titulos-textos{
+    margin-left: 145px;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fed41d;
+    text-shadow: 2px 2px 0px #000;
+}

@@ -2,7 +2,7 @@ export const initialStore=()=>{
   return{
     message: null,
     characters: [],
-    location: [],
+    locations: [],
     todos: [
       {
         id: 1,
@@ -36,11 +36,11 @@ export default function storeReducer(store, action = {}) {
         characters: action.payload
       }
 
-        case 'get_location':
+        case 'get_locations':
 
       return {
         ...store,
-        location: action.payload
+        locations: action.payload
       }
 
     default:

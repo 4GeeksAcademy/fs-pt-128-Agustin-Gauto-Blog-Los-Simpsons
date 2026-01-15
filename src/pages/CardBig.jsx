@@ -34,7 +34,18 @@ export const CardBig = () => {
                         </div>
                         <div className="col-6">
                             <h1>{character.name}</h1>
-                            <p>{character.age}</p>
+                            <p>Birthdate: {character.birthdate}</p>
+                            <p>Age: {character.age}</p>
+                            <p>Gender {character.gender}</p>
+                            <p>occupation: {character.occupation}</p>
+
+                            <ul>
+                        {character.phrases && character.phrases.map((frase, index) => (
+                           <li key={index} className="list-group-item">
+                             <i class="fa-regular fa-message"></i> <i>"{frase}"</i>
+                           </li>
+                        ))}
+                     </ul>
                         </div>
                     </div>
                     <Link to="/">
