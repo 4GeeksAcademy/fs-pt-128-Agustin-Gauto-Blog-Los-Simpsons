@@ -3,6 +3,7 @@ import useGlobalReducer from "../hooks/useGlobalReducer";
 
 export const Navbar = ({ favorites }) => {
 
+
 	const { store, dispatch } = useGlobalReducer()
 
 	return (

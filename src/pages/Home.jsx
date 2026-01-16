@@ -7,7 +7,6 @@ import { CardLocation } from "../components/CardLocation.jsx";
 
 export const Home = () => {
 
-	
 
   const {store, dispatch} =useGlobalReducer()
 

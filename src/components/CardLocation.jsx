@@ -7,11 +7,13 @@ export const CardLocation = ({ location }) => {
 
     
         const favorite = store.favoritesLocation.some( favorite => favorite.id === location.id )
-    
+
+        
         
         const addFavoriteLocation = () => {
+             if(!favorite){
             dispatch({type: "add_favorites_location", payload: location})
-        }
+        }}
 
     return (
         <>

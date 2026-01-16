@@ -9,8 +9,9 @@ export const CardSmall = ({ character}) => {
 
     
     const addFavorite = () => {
+        if(!favorite){
         dispatch({type: "add_favorites", payload: character})
-	}
+	}}
 
 
     return (
