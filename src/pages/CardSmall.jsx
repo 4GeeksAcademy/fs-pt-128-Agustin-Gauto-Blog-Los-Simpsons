@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom"
 import useGlobalReducer from "../hooks/useGlobalReducer"
 
-export const CardSmall = ({ character, type }) => {
-    
+export const CardSmall = ({ character}) => {
+
     const { store, dispatch } = useGlobalReducer()
 
-    const favorite = store.favorites.some( favorite => favorite.id === character.id && favorite.type === type)
+    const favorite = store.favorites.some( favorite => favorite.id === character.id )
+
     
     const addFavorite = () => {
         dispatch({type: "add_favorites", payload: character})
-
-        console.log(character);
-        console.log(store.favorites);
 	}
 
 
@@ -28,7 +26,7 @@ export const CardSmall = ({ character, type }) => {
                         <Link to={`/character/${character.id}`}>
                         <a type="button" className="btn btn-primary">Learn more!</a>
 					</Link>
-                        <button type="button" className="btn btn-outline-warning" onClick={addFavorite}>❤️</button>
+                        <button type="button" className="btn btn-outline-warning" onClick={addFavorite}><i className={`${favorite ? "fa-solid" : "fa-regular"} fa-heart`}></i></button>
                     </div>
                 </div>
             </div>

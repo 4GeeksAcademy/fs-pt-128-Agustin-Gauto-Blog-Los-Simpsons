@@ -5,6 +5,14 @@ export const CardLocation = ({ location }) => {
 
     const { store, dispatch } = useGlobalReducer()
 
+    
+        const favorite = store.favoritesLocation.some( favorite => favorite.id === location.id )
+    
+        
+        const addFavoriteLocation = () => {
+            dispatch({type: "add_favorites_location", payload: location})
+        }
+
     return (
         <>
             <div className="card m-2" style={{ minWidth: "18rem", height: "460px" }}>
@@ -17,7 +25,7 @@ export const CardLocation = ({ location }) => {
                         <Link to={`/location/${location.id}`}>
                         <a type="button" className="btn btn-primary">Learn more!</a>
                     </Link>
-                        <button type="button" className="btn btn-outline-warning">❤️</button>
+                        <button type="button" className="btn btn-outline-warning" onClick={addFavoriteLocation}><i className={`${favorite ? "fa-solid" : "fa-regular"} fa-heart`}></i></button>
                     </div>
                 </div>
             </div>
